@@ -61,3 +61,47 @@ export default function Accordion() {
     </div>
   );
 }
+// Style
+
+body {
+  font-family: sans-serif;
+  color: rebeccapurple;
+}
+.accordion {
+  margin: 12px;
+  transition: all 0.5s ease;
+}
+.accordion-header {
+  cursor: pointer;
+}
+
+.accordion-icon {
+  border: solid currentcolor;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  height: 8px;
+  pointer-events: none;
+  transform: translateY(-2px) rotate(45deg);
+  width: 8px;
+}
+.accordion-body {
+  overflow: hidden;
+  opacity: 0;
+  transition:
+    max-height 0.1s ease,
+    opacity 0.3s ease;
+}
+
+.show {
+  max-height: 200px; /* adjust based on content */
+  opacity: 1;
+}
+
+.hide {
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-icon--rotated {
+  transform: translateY(2px) rotate(-135deg);
+}
